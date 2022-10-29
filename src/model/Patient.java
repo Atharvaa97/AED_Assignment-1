@@ -9,22 +9,15 @@ package model;
  * @author Atharva
  */
 public class Patient {
-    public Person person = new Person();
-    public int patientId;
+  public static int PATIENT_ID = 1000;
 
-    public Person getPerson() {
-        return person;
+    public Person personDetails;
+    public EncounterHistory allVisitsHistory;
+    public VitalSigns vitalSigns;
+    public int patientIdentifier;
+    
+    public Patient() {
+        allVisitsHistory = new EncounterHistory();
     }
 
-    public void setPerson(Person person) {
-        this.person = person;
-    }
-
-    public int getPatientId() {
-        return patientId;
-    }
-
-    public void setPatientId(int patientId) {
-        this.patientId = patientId;
-    }
 }

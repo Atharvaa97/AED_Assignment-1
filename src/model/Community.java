@@ -14,14 +14,6 @@ public class Community extends City{
     public String communityName;
     public Date createdAt;
 
-    public String getCommunityName() {
-        return communityName;
-    }
-
-    public void setCommunityName(String communityName) {
-        this.communityName = communityName;
-    }
-    
     public String validateCommunityName(String name) {
         String isValid = "";
         if (name.equals("")) {
@@ -38,12 +30,11 @@ public class Community extends City{
     
     public Boolean alreadtExists(String city, String community) {
         Boolean found = false;
-        for (int i = 0; i < City.communityDir.size(); i++) {
-            if (city.equals(City.communityDir.get(i).cityName) && community.equals(City.communityDir.get(i).communityName)) {
+        for (int i = 0; i < City.allCities.size(); i++) {
+            if (city.equals(City.allCities.get(i).city) && community.equals(City.allCities.get(i).communityName)) {
                 found = true;
             }
         }
         return found;
     }
-    
 }
