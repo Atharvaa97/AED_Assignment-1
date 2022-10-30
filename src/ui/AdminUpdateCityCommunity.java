@@ -122,7 +122,7 @@ public class AdminUpdateCityCommunity extends javax.swing.JPanel {
 
         brandJLabel.setFont(new java.awt.Font("PT Sans Caption", 0, 14)); // NOI18N
         brandJLabel.setForeground(new java.awt.Color(255, 255, 255));
-        brandJLabel.setText("City (*):");
+        brandJLabel.setText("City:");
 
         cityJComboBox.setBackground(new java.awt.Color(238, 238, 238));
         cityJComboBox.setForeground(new java.awt.Color(255, 255, 255));
@@ -144,7 +144,7 @@ public class AdminUpdateCityCommunity extends javax.swing.JPanel {
 
         seatsJLabel.setFont(new java.awt.Font("PT Sans Caption", 0, 14)); // NOI18N
         seatsJLabel.setForeground(new java.awt.Color(255, 255, 255));
-        seatsJLabel.setText("Community Name (*):");
+        seatsJLabel.setText("Community Name:");
 
         communityJField.setBackground(new java.awt.Color(238, 238, 238));
         communityJField.setForeground(new java.awt.Color(255, 255, 255));
@@ -170,16 +170,20 @@ public class AdminUpdateCityCommunity extends javax.swing.JPanel {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(147, Short.MAX_VALUE)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap(175, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(seatsJLabel, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(brandJLabel, javax.swing.GroupLayout.Alignment.TRAILING))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addComponent(seatsJLabel)
+                        .addGap(4, 4, 4))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addComponent(brandJLabel)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(11, 11, 11)
                         .addComponent(jButton1)
-                        .addGap(29, 29, 29)
+                        .addGap(18, 18, 18)
                         .addComponent(jButton2))
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                         .addComponent(cityJComboBox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -195,18 +199,19 @@ public class AdminUpdateCityCommunity extends javax.swing.JPanel {
                     .addComponent(brandJLabel))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(seatsJLabel)
-                    .addComponent(communityJField, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(communityJField, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(seatsJLabel))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap())
+                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton1))
+                .addGap(476, 476, 476))
         );
 
         jSplitPane1.setRightComponent(jPanel1);
 
         jPanel2.setBackground(new java.awt.Color(11, 48, 56));
+        jPanel2.setForeground(new java.awt.Color(255, 255, 255));
 
         cityJList.setBackground(new java.awt.Color(238, 238, 238));
         cityJList.addFocusListener(new java.awt.event.FocusAdapter() {
@@ -247,6 +252,7 @@ public class AdminUpdateCityCommunity extends javax.swing.JPanel {
         jSplitPane1.setLeftComponent(jPanel2);
 
         jLabel1.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Update People Directory");
 

@@ -97,13 +97,14 @@ public class NewPersonAddition extends javax.swing.JPanel {
         seatsJLabel7 = new javax.swing.JLabel();
         cityJComboBox = new javax.swing.JComboBox<>();
         communityJComboBox = new javax.swing.JComboBox<>();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(11, 48, 56));
 
         nameJField.setBackground(new java.awt.Color(238, 238, 238));
         nameJField.setForeground(new java.awt.Color(0, 0, 0));
         nameJField.setHorizontalAlignment(javax.swing.JTextField.LEFT);
-        nameJField.setText("Enter here");
         nameJField.setToolTipText("Click to enter your name.");
         nameJField.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 5, 1, 5));
         nameJField.addFocusListener(new java.awt.event.FocusAdapter() {
@@ -117,11 +118,11 @@ public class NewPersonAddition extends javax.swing.JPanel {
 
         seatsJLabel.setFont(new java.awt.Font("PT Sans Caption", 0, 14)); // NOI18N
         seatsJLabel.setForeground(new java.awt.Color(255, 255, 255));
-        seatsJLabel.setText("Name (*) :");
+        seatsJLabel.setText("Name:");
 
         maintenanceExpiryJLabel.setFont(new java.awt.Font("PT Sans Caption", 0, 14)); // NOI18N
         maintenanceExpiryJLabel.setForeground(new java.awt.Color(255, 255, 255));
-        maintenanceExpiryJLabel.setText("DOB (*) :");
+        maintenanceExpiryJLabel.setText("DOB:");
 
         dobDayJField.setBackground(new java.awt.Color(238, 238, 238));
         dobDayJField.setForeground(new java.awt.Color(0, 0, 0));
@@ -194,12 +195,11 @@ public class NewPersonAddition extends javax.swing.JPanel {
 
         seatsJLabel1.setFont(new java.awt.Font("PT Sans Caption", 0, 14)); // NOI18N
         seatsJLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        seatsJLabel1.setText("Address (*):");
+        seatsJLabel1.setText("Address:");
 
         addressJField.setBackground(new java.awt.Color(238, 238, 238));
         addressJField.setForeground(new java.awt.Color(0, 0, 0));
         addressJField.setHorizontalAlignment(javax.swing.JTextField.LEFT);
-        addressJField.setText("Enter here");
         addressJField.setToolTipText("Click to enter your name.");
         addressJField.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 5, 1, 5));
         addressJField.addFocusListener(new java.awt.event.FocusAdapter() {
@@ -218,12 +218,11 @@ public class NewPersonAddition extends javax.swing.JPanel {
 
         seatsJLabel2.setFont(new java.awt.Font("PT Sans Caption", 0, 14)); // NOI18N
         seatsJLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        seatsJLabel2.setText("ZipCode (*):");
+        seatsJLabel2.setText("ZipCode:");
 
         zipJField.setBackground(new java.awt.Color(238, 238, 238));
         zipJField.setForeground(new java.awt.Color(0, 0, 0));
         zipJField.setHorizontalAlignment(javax.swing.JTextField.LEFT);
-        zipJField.setText("Enter here");
         zipJField.setToolTipText("Click to enter your name.");
         zipJField.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 5, 1, 5));
         zipJField.addFocusListener(new java.awt.event.FocusAdapter() {
@@ -242,12 +241,11 @@ public class NewPersonAddition extends javax.swing.JPanel {
 
         seatsJLabel3.setFont(new java.awt.Font("PT Sans Caption", 0, 14)); // NOI18N
         seatsJLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        seatsJLabel3.setText("State (*):");
+        seatsJLabel3.setText("State:");
 
         stateJField.setBackground(new java.awt.Color(238, 238, 238));
         stateJField.setForeground(new java.awt.Color(0, 0, 0));
         stateJField.setHorizontalAlignment(javax.swing.JTextField.LEFT);
-        stateJField.setText("Enter here");
         stateJField.setToolTipText("Click to enter your name.");
         stateJField.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 5, 1, 5));
         stateJField.addFocusListener(new java.awt.event.FocusAdapter() {
@@ -261,15 +259,15 @@ public class NewPersonAddition extends javax.swing.JPanel {
 
         seatsJLabel4.setFont(new java.awt.Font("PT Sans Caption", 0, 14)); // NOI18N
         seatsJLabel4.setForeground(new java.awt.Color(255, 255, 255));
-        seatsJLabel4.setText("Community Name (*):");
+        seatsJLabel4.setText("Community Name:");
 
         cardentifierJLabel.setFont(new java.awt.Font("PT Sans Caption", 0, 14)); // NOI18N
         cardentifierJLabel.setForeground(new java.awt.Color(255, 255, 255));
-        cardentifierJLabel.setText("Person Identifier (*):");
+        cardentifierJLabel.setText("Person Identifier:");
 
         personIdentifierJLabel.setEditable(false);
-        personIdentifierJLabel.setBackground(new java.awt.Color(216, 220, 228));
-        personIdentifierJLabel.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
+        personIdentifierJLabel.setBackground(new java.awt.Color(238, 238, 238));
+        personIdentifierJLabel.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         personIdentifierJLabel.setForeground(new java.awt.Color(0, 0, 0));
         personIdentifierJLabel.setHorizontalAlignment(javax.swing.JTextField.LEFT);
         personIdentifierJLabel.setToolTipText("This is your identifier.");
@@ -282,12 +280,11 @@ public class NewPersonAddition extends javax.swing.JPanel {
 
         seatsJLabel5.setFont(new java.awt.Font("PT Sans Caption", 0, 14)); // NOI18N
         seatsJLabel5.setForeground(new java.awt.Color(255, 255, 255));
-        seatsJLabel5.setText("Email ID (*):");
+        seatsJLabel5.setText("Email ID:");
 
         emailJField.setBackground(new java.awt.Color(238, 238, 238));
         emailJField.setForeground(new java.awt.Color(0, 0, 0));
         emailJField.setHorizontalAlignment(javax.swing.JTextField.LEFT);
-        emailJField.setText("Enter here");
         emailJField.setToolTipText("Click to enter your name.");
         emailJField.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 5, 1, 5));
         emailJField.addFocusListener(new java.awt.event.FocusAdapter() {
@@ -306,6 +303,7 @@ public class NewPersonAddition extends javax.swing.JPanel {
 
         dummyJField4.setEditable(false);
         dummyJField4.setBackground(new java.awt.Color(216, 220, 228));
+        dummyJField4.setForeground(new java.awt.Color(0, 0, 0));
         dummyJField4.setHorizontalAlignment(javax.swing.JTextField.LEFT);
         dummyJField4.setText("+1");
         dummyJField4.setToolTipText("");
@@ -414,7 +412,7 @@ public class NewPersonAddition extends javax.swing.JPanel {
 
         seatsJLabel6.setFont(new java.awt.Font("PT Sans Caption", 0, 14)); // NOI18N
         seatsJLabel6.setForeground(new java.awt.Color(255, 255, 255));
-        seatsJLabel6.setText("Mobile No(*):");
+        seatsJLabel6.setText("Mobile No:");
 
         jButton2.setBackground(new java.awt.Color(0, 0, 0));
         jButton2.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
@@ -426,13 +424,13 @@ public class NewPersonAddition extends javax.swing.JPanel {
             }
         });
 
-        jLabel1.setFont(new java.awt.Font("MS Reference Sans Serif", 1, 24)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("SimSun", 1, 36)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Add Person");
 
         seatsJLabel7.setFont(new java.awt.Font("PT Sans Caption", 0, 14)); // NOI18N
         seatsJLabel7.setForeground(new java.awt.Color(255, 255, 255));
-        seatsJLabel7.setText("City (*):");
+        seatsJLabel7.setText("City:");
 
         cityJComboBox.setBackground(new java.awt.Color(255, 255, 255));
         cityJComboBox.addItemListener(new java.awt.event.ItemListener() {
@@ -463,6 +461,10 @@ public class NewPersonAddition extends javax.swing.JPanel {
             }
         });
 
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ui/images/person.png"))); // NOI18N
+
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ui/images/person2(1).png"))); // NOI18N
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -470,7 +472,6 @@ public class NewPersonAddition extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addGap(20, 20, 20)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(seatsJLabel2, javax.swing.GroupLayout.Alignment.TRAILING)
@@ -517,67 +518,82 @@ public class NewPersonAddition extends javax.swing.JPanel {
                             .addComponent(stateJField, javax.swing.GroupLayout.PREFERRED_SIZE, 215, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(communityJComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 215, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(emailJField, javax.swing.GroupLayout.PREFERRED_SIZE, 215, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(personIdentifierJLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 215, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(333, Short.MAX_VALUE))
+                            .addComponent(personIdentifierJLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 215, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(jLabel1))
+                .addGap(49, 49, 49)
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 236, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(37, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(30, 30, 30)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(seatsJLabel)
-                    .addComponent(nameJField, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(addressJField, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(seatsJLabel1))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(zipJField, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(seatsJLabel2))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(seatsJLabel7)
-                    .addComponent(cityJComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(stateJField, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(seatsJLabel3))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(communityJComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(seatsJLabel4))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(maintenanceExpiryJLabel)
-                    .addComponent(dobDayJField, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(dummyJField3, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(dobMonthJField, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(dummyJField2, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(dobYearJField, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(emailJField, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(seatsJLabel5))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(dummyJField5, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(phoneNoJField1, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(dummyJField6, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(dummyJField7, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(phoneNoJField3, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(phoneNoJField2, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(dummyJField4, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(seatsJLabel6))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(personIdentifierJLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(cardentifierJLabel))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(17, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(30, 30, 30)
+                                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(19, 19, 19)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(seatsJLabel)
+                                    .addComponent(nameJField, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(addressJField, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(seatsJLabel1))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(zipJField, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(seatsJLabel2)))
+                            .addGroup(layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 236, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(seatsJLabel7)
+                            .addComponent(cityJComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(stateJField, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(seatsJLabel3))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(communityJComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(seatsJLabel4))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(maintenanceExpiryJLabel)
+                            .addComponent(dobDayJField, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(dummyJField3, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(dobMonthJField, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(dummyJField2, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(dobYearJField, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(14, 14, 14)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(emailJField, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(seatsJLabel5))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(dummyJField5, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(phoneNoJField1, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(dummyJField6, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(dummyJField7, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(phoneNoJField3, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(phoneNoJField2, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(dummyJField4, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(seatsJLabel6))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(personIdentifierJLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(cardentifierJLabel))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(173, 173, 173)
+                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 327, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(67, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -835,6 +851,8 @@ public class NewPersonAddition extends javax.swing.JPanel {
     private javax.swing.JTextField emailJField;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel maintenanceExpiryJLabel;
     private javax.swing.JTextField nameJField;
     private javax.swing.JTextField personIdentifierJLabel;

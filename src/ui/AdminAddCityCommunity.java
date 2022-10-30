@@ -67,11 +67,13 @@ public class AdminAddCityCommunity extends javax.swing.JPanel {
         jButton1 = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         cityJTable = new javax.swing.JTable();
+        jLabel3 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(11, 48, 56));
 
         brandJLabel.setFont(new java.awt.Font("PT Sans Caption", 0, 14)); // NOI18N
-        brandJLabel.setText("City (*):");
+        brandJLabel.setForeground(new java.awt.Color(255, 255, 255));
+        brandJLabel.setText("City:");
 
         cityJComboBox.setBackground(new java.awt.Color(222, 222, 222));
         cityJComboBox.setForeground(new java.awt.Color(0, 0, 0));
@@ -85,11 +87,6 @@ public class AdminAddCityCommunity extends javax.swing.JPanel {
                 cityJComboBoxFocusGained(evt);
             }
         });
-        cityJComboBox.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cityJComboBoxActionPerformed(evt);
-            }
-        });
         cityJComboBox.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
             public void propertyChange(java.beans.PropertyChangeEvent evt) {
                 cityJComboBoxPropertyChange(evt);
@@ -97,12 +94,12 @@ public class AdminAddCityCommunity extends javax.swing.JPanel {
         });
 
         seatsJLabel.setFont(new java.awt.Font("PT Sans Caption", 0, 14)); // NOI18N
-        seatsJLabel.setText("Community Name (*):");
+        seatsJLabel.setForeground(new java.awt.Color(255, 255, 255));
+        seatsJLabel.setText("Community Name:");
 
         communityJField.setBackground(new java.awt.Color(238, 238, 238));
         communityJField.setForeground(new java.awt.Color(0, 0, 0));
         communityJField.setHorizontalAlignment(javax.swing.JTextField.LEFT);
-        communityJField.setText("Enter here");
         communityJField.setToolTipText("Click to enter your name.");
         communityJField.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 5, 1, 5));
         communityJField.setDisabledTextColor(new java.awt.Color(0, 0, 0));
@@ -121,6 +118,7 @@ public class AdminAddCityCommunity extends javax.swing.JPanel {
         });
 
         jLabel1.setFont(new java.awt.Font("MS Reference Sans Serif", 1, 16)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Add City and Community");
 
         jButton1.setBackground(new java.awt.Color(0, 0, 0));
@@ -155,6 +153,8 @@ public class AdminAddCityCommunity extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(cityJTable);
 
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ui/images/City(1).png"))); // NOI18N
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -162,7 +162,7 @@ public class AdminAddCityCommunity extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(165, 165, 165)
                                 .addComponent(jLabel1))
@@ -173,34 +173,39 @@ public class AdminAddCityCommunity extends javax.swing.JPanel {
                                     .addComponent(brandJLabel, javax.swing.GroupLayout.Alignment.TRAILING))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                        .addComponent(cityJComboBox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(communityJField, javax.swing.GroupLayout.DEFAULT_SIZE, 334, Short.MAX_VALUE)))))
-                        .addGap(0, 0, Short.MAX_VALUE))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(0, 0, Short.MAX_VALUE))
+                                    .addComponent(cityJComboBox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(communityJField))))
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel3))
                     .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 523, Short.MAX_VALUE)))
-                .addContainerGap())
+                        .addGap(54, 54, 54)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 675, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(100, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1)
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(cityJComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(brandJLabel))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(seatsJLabel)
-                    .addComponent(communityJField, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(299, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel1)
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(brandJLabel)
+                            .addComponent(cityJComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(30, 30, 30)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(communityJField, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(seatsJLabel))
+                        .addGap(18, 18, 18)
+                        .addComponent(jButton1))
+                    .addComponent(jLabel3))
+                .addGap(53, 53, 53)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(216, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -229,10 +234,6 @@ public class AdminAddCityCommunity extends javax.swing.JPanel {
     private void communityJFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_communityJFieldActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_communityJFieldActionPerformed
-
-    private void cityJComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cityJComboBoxActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cityJComboBoxActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         String errorMessage = "";
@@ -267,6 +268,7 @@ public class AdminAddCityCommunity extends javax.swing.JPanel {
     private javax.swing.JTextField communityJField;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel seatsJLabel;
     // End of variables declaration//GEN-END:variables

@@ -24,7 +24,6 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
                   <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="seatsJLabel2" alignment="1" min="-2" max="-2" attributes="0"/>
@@ -77,79 +76,100 @@
                           <Component id="personIdentifierJLabel" alignment="0" min="-2" pref="215" max="-2" attributes="0"/>
                       </Group>
                   </Group>
+                  <Component id="jLabel1" alignment="0" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="333" max="32767" attributes="0"/>
+              <EmptySpace min="-2" pref="49" max="-2" attributes="0"/>
+              <Component id="jLabel2" min="-2" pref="239" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="jLabel4" min="-2" pref="236" max="-2" attributes="0"/>
+              <EmptySpace pref="37" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
-              <Component id="jLabel1" min="-2" pref="52" max="-2" attributes="0"/>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="seatsJLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="nameJField" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
+          <Group type="102" attributes="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+                              <Component id="jLabel1" min="-2" pref="52" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="seatsJLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="nameJField" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="addressJField" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
+                                  <Component id="seatsJLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="zipJField" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
+                                  <Component id="seatsJLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="jLabel2" min="-2" pref="236" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="seatsJLabel7" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="cityJComboBox" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="stateJField" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
+                          <Component id="seatsJLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="communityJComboBox" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
+                          <Component id="seatsJLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="maintenanceExpiryJLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="dobDayJField" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
+                          <Component id="dummyJField3" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
+                          <Component id="dobMonthJField" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
+                          <Component id="dummyJField2" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
+                          <Component id="dobYearJField" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="emailJField" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
+                          <Component id="seatsJLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="dummyJField5" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
+                          <Component id="phoneNoJField1" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
+                          <Component id="dummyJField6" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
+                          <Component id="dummyJField7" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
+                          <Component id="phoneNoJField3" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
+                          <Component id="phoneNoJField2" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
+                          <Component id="dummyJField4" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
+                          <Component id="seatsJLabel6" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="personIdentifierJLabel" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
+                          <Component id="cardentifierJLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Component id="jButton2" min="-2" pref="40" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="173" max="-2" attributes="0"/>
+                      <Component id="jLabel4" min="-2" pref="327" max="-2" attributes="0"/>
+                  </Group>
               </Group>
-              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="addressJField" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
-                  <Component id="seatsJLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="zipJField" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
-                  <Component id="seatsJLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="seatsJLabel7" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="cityJComboBox" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="stateJField" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
-                  <Component id="seatsJLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="communityJComboBox" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
-                  <Component id="seatsJLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="maintenanceExpiryJLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="dobDayJField" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
-                  <Component id="dummyJField3" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
-                  <Component id="dobMonthJField" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
-                  <Component id="dummyJField2" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
-                  <Component id="dobYearJField" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="emailJField" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
-                  <Component id="seatsJLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="dummyJField5" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
-                  <Component id="phoneNoJField1" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
-                  <Component id="dummyJField6" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
-                  <Component id="dummyJField7" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
-                  <Component id="phoneNoJField3" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
-                  <Component id="phoneNoJField2" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
-                  <Component id="dummyJField4" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
-                  <Component id="seatsJLabel6" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="personIdentifierJLabel" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
-                  <Component id="cardentifierJLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-              <Component id="jButton2" min="-2" pref="40" max="-2" attributes="0"/>
-              <EmptySpace pref="17" max="32767" attributes="0"/>
+              <EmptySpace pref="67" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -164,7 +184,6 @@
           <Color blue="0" green="0" red="0" type="rgb"/>
         </Property>
         <Property name="horizontalAlignment" type="int" value="2"/>
-        <Property name="text" type="java.lang.String" value="Enter here"/>
         <Property name="toolTipText" type="java.lang.String" value="Click to enter your name."/>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <Border info="org.netbeans.modules.form.compat2.border.EmptyBorderInfo">
@@ -185,7 +204,7 @@
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="ff" red="ff" type="rgb"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Name (*) :"/>
+        <Property name="text" type="java.lang.String" value="Name:"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="maintenanceExpiryJLabel">
@@ -196,7 +215,7 @@
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="ff" red="ff" type="rgb"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="DOB (*) :"/>
+        <Property name="text" type="java.lang.String" value="DOB:"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="dobDayJField">
@@ -311,7 +330,7 @@
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="ff" red="ff" type="rgb"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Address (*):"/>
+        <Property name="text" type="java.lang.String" value="Address:"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="addressJField">
@@ -323,7 +342,6 @@
           <Color blue="0" green="0" red="0" type="rgb"/>
         </Property>
         <Property name="horizontalAlignment" type="int" value="2"/>
-        <Property name="text" type="java.lang.String" value="Enter here"/>
         <Property name="toolTipText" type="java.lang.String" value="Click to enter your name."/>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <Border info="org.netbeans.modules.form.compat2.border.EmptyBorderInfo">
@@ -345,7 +363,7 @@
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="ff" red="ff" type="rgb"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="ZipCode (*):"/>
+        <Property name="text" type="java.lang.String" value="ZipCode:"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="zipJField">
@@ -357,7 +375,6 @@
           <Color blue="0" green="0" red="0" type="rgb"/>
         </Property>
         <Property name="horizontalAlignment" type="int" value="2"/>
-        <Property name="text" type="java.lang.String" value="Enter here"/>
         <Property name="toolTipText" type="java.lang.String" value="Click to enter your name."/>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <Border info="org.netbeans.modules.form.compat2.border.EmptyBorderInfo">
@@ -379,7 +396,7 @@
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="ff" red="ff" type="rgb"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="State (*):"/>
+        <Property name="text" type="java.lang.String" value="State:"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="stateJField">
@@ -391,7 +408,6 @@
           <Color blue="0" green="0" red="0" type="rgb"/>
         </Property>
         <Property name="horizontalAlignment" type="int" value="2"/>
-        <Property name="text" type="java.lang.String" value="Enter here"/>
         <Property name="toolTipText" type="java.lang.String" value="Click to enter your name."/>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <Border info="org.netbeans.modules.form.compat2.border.EmptyBorderInfo">
@@ -412,7 +428,7 @@
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="ff" red="ff" type="rgb"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Community Name (*):"/>
+        <Property name="text" type="java.lang.String" value="Community Name:"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="cardentifierJLabel">
@@ -423,17 +439,17 @@
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="ff" red="ff" type="rgb"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Person Identifier (*):"/>
+        <Property name="text" type="java.lang.String" value="Person Identifier:"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="personIdentifierJLabel">
       <Properties>
         <Property name="editable" type="boolean" value="false"/>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="e4" green="dc" red="d8" type="rgb"/>
+          <Color blue="ee" green="ee" red="ee" type="rgb"/>
         </Property>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Lucida Grande" size="18" style="1"/>
+          <Font name="Dialog" size="14" style="1"/>
         </Property>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="0" green="0" red="0" type="rgb"/>
@@ -458,7 +474,7 @@
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="ff" red="ff" type="rgb"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Email ID (*):"/>
+        <Property name="text" type="java.lang.String" value="Email ID:"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="emailJField">
@@ -470,7 +486,6 @@
           <Color blue="0" green="0" red="0" type="rgb"/>
         </Property>
         <Property name="horizontalAlignment" type="int" value="2"/>
-        <Property name="text" type="java.lang.String" value="Enter here"/>
         <Property name="toolTipText" type="java.lang.String" value="Click to enter your name."/>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <Border info="org.netbeans.modules.form.compat2.border.EmptyBorderInfo">
@@ -489,6 +504,9 @@
         <Property name="editable" type="boolean" value="false"/>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="e4" green="dc" red="d8" type="rgb"/>
+        </Property>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="0" green="0" red="0" type="rgb"/>
         </Property>
         <Property name="horizontalAlignment" type="int" value="2"/>
         <Property name="text" type="java.lang.String" value="+1"/>
@@ -637,7 +655,7 @@
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="ff" red="ff" type="rgb"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Mobile No(*):"/>
+        <Property name="text" type="java.lang.String" value="Mobile No:"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="jButton2">
@@ -660,7 +678,7 @@
     <Component class="javax.swing.JLabel" name="jLabel1">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="MS Reference Sans Serif" size="24" style="1"/>
+          <Font name="SimSun" size="36" style="1"/>
         </Property>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -676,7 +694,7 @@
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="ff" red="ff" type="rgb"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="City (*):"/>
+        <Property name="text" type="java.lang.String" value="City:"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JComboBox" name="cityJComboBox">
@@ -713,6 +731,20 @@
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
       </AuxValues>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel2">
+      <Properties>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="3" name="/ui/images/person.png"/>
+        </Property>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel4">
+      <Properties>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="3" name="/ui/images/person2(1).png"/>
+        </Property>
+      </Properties>
     </Component>
   </SubComponents>
 </Form>

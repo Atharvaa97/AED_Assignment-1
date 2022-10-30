@@ -156,7 +156,7 @@
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="64" green="64" red="43" type="rgb"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Patient Login"/>
+        <Property name="text" type="java.lang.String" value="Doctor Login"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="loginJButton2ActionPerformed"/>

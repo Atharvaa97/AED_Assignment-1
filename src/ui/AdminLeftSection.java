@@ -160,11 +160,21 @@ public class AdminLeftSection extends javax.swing.JPanel {
         jButton15.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
         jButton15.setForeground(new java.awt.Color(255, 255, 255));
         jButton15.setText("Doctor Directory");
+        jButton15.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton15ActionPerformed(evt);
+            }
+        });
 
         jButton16.setBackground(new java.awt.Color(0, 0, 0));
         jButton16.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
         jButton16.setForeground(new java.awt.Color(255, 255, 255));
         jButton16.setText("Add Doctor");
+        jButton16.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton16ActionPerformed(evt);
+            }
+        });
 
         jButton17.setBackground(new java.awt.Color(0, 0, 0));
         jButton17.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
@@ -277,6 +287,16 @@ public class AdminLeftSection extends javax.swing.JPanel {
         AdminUpdateCityCommunity udpdateCityCommunityDashbaord = new AdminUpdateCityCommunity(jSplitMainPane);
         this.jSplitMainPane.setRightComponent(udpdateCityCommunityDashbaord);
     }//GEN-LAST:event_jButton13ActionPerformed
+
+    private void jButton16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton16ActionPerformed
+        NewDoctorAddition newDoctorDasboard = new NewDoctorAddition(jSplitMainPane);
+        this.jSplitMainPane.setRightComponent(newDoctorDasboard);
+    }//GEN-LAST:event_jButton16ActionPerformed
+
+    private void jButton15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton15ActionPerformed
+        DoctorView doctorDirectoryDashbaord = new DoctorView();
+        this.jSplitMainPane.setRightComponent(doctorDirectoryDashbaord);
+    }//GEN-LAST:event_jButton15ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
