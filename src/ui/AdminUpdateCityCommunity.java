@@ -6,10 +6,8 @@ package ui;
 
 import model.City;
 import model.Community;
-import model.PersonDirectory;
 import java.awt.Dimension;
 import java.awt.Toolkit;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import javax.swing.DefaultComboBoxModel;
@@ -149,7 +147,6 @@ public class AdminUpdateCityCommunity extends javax.swing.JPanel {
         communityJField.setBackground(new java.awt.Color(238, 238, 238));
         communityJField.setForeground(new java.awt.Color(255, 255, 255));
         communityJField.setHorizontalAlignment(javax.swing.JTextField.LEFT);
-        communityJField.setText("Enter here");
         communityJField.setToolTipText("Click to enter your name.");
         communityJField.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 5, 1, 5));
         communityJField.addFocusListener(new java.awt.event.FocusAdapter() {
@@ -203,7 +200,7 @@ public class AdminUpdateCityCommunity extends javax.swing.JPanel {
                     .addComponent(seatsJLabel))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton2)
                     .addComponent(jButton1))
                 .addGap(476, 476, 476))
         );
@@ -227,6 +224,7 @@ public class AdminUpdateCityCommunity extends javax.swing.JPanel {
         jScrollPane1.setViewportView(cityJList);
 
         jLabel2.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("List:");
 
@@ -254,7 +252,7 @@ public class AdminUpdateCityCommunity extends javax.swing.JPanel {
         jLabel1.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Update People Directory");
+        jLabel1.setText("Update City & Community");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);

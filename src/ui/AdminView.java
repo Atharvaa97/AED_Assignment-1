@@ -5,7 +5,7 @@
 package ui;
 
 import model.Person;
-import model.PersonDirectory;
+import model.Person_Directory;
 import java.awt.Dimension;
 import java.awt.Toolkit;
 import java.text.ParseException;
@@ -31,11 +31,11 @@ public class AdminView extends javax.swing.JPanel {
         jSplitPane1.setDividerLocation((int) (0.35 * (new Dimension(Toolkit.getDefaultToolkit().getScreenSize()).width - 300)));
         DefaultListModel model = new DefaultListModel();
         detailsJPanel.setVisible(false);
-        if (PersonDirectory.allPeople.isEmpty()) {
+        if (Person_Directory.allPeople.isEmpty()) {
             uploadedJList.setModel(model);
             JOptionPane.showMessageDialog(this, "People Directory Empty!", "View Details", ERROR_MESSAGE);
         } else {
-            PersonDirectory.allPeople.forEach(car -> {
+            Person_Directory.allPeople.forEach(car -> {
                 model.addElement(car.personId + " - " + car.name);
             });
             uploadedJList.setModel(model);
@@ -274,6 +274,7 @@ public class AdminView extends javax.swing.JPanel {
 
         jPanel2.setBackground(new java.awt.Color(11, 48, 56));
 
+        uploadedJList.setBackground(new java.awt.Color(238, 238, 238));
         uploadedJList.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
                 uploadedJListFocusGained(evt);
@@ -354,7 +355,7 @@ public class AdminView extends javax.swing.JPanel {
     private void openSelectedProfile() throws ParseException {
         int seletedPersonIndex = uploadedJList.getSelectedIndex();
         if (seletedPersonIndex != -1) {
-            Person selectedPerson = PersonDirectory.allPeople.get(seletedPersonIndex);
+            Person selectedPerson = Person_Directory.allPeople.get(seletedPersonIndex);
             detailsJPanel.setVisible(true);
             identifierJLabel.setText(String.valueOf(selectedPerson.personId));
             nameJLabel.setText(String.valueOf(selectedPerson.name));

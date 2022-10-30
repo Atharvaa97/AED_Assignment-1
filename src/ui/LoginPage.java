@@ -4,10 +4,8 @@
  */
 package ui;
 
-import model.User;
 import javax.swing.JButton;
 import javax.swing.JOptionPane;
-import static javax.swing.JOptionPane.ERROR_MESSAGE;
 import javax.swing.JPanel;
 import javax.swing.JSplitPane;
 
@@ -21,7 +19,7 @@ public class LoginPage extends javax.swing.JPanel {
     public JPanel leftJPanel;
     public JPanel rightJPanel;
     public JButton logoutJButton;
-
+    
     /**
      * Creates new form LoginPage
      */
@@ -42,181 +40,218 @@ public class LoginPage extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        loginJButton = new javax.swing.JButton();
-        passwordJField = new javax.swing.JTextField();
-        emailIDJField = new javax.swing.JTextField();
+        userJField = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
-        loginJButton1 = new javax.swing.JButton();
-        loginJButton2 = new javax.swing.JButton();
+        jLabel3 = new javax.swing.JLabel();
+        comboRole = new javax.swing.JComboBox<>();
+        btnLogin = new javax.swing.JButton();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        passwordJField = new javax.swing.JPasswordField();
+        jLabel2 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(11, 48, 56));
 
-        loginJButton.setBackground(new java.awt.Color(200, 203, 178));
-        loginJButton.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
-        loginJButton.setForeground(new java.awt.Color(67, 100, 100));
-        loginJButton.setText("System Admin Login");
-        loginJButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                loginJButtonActionPerformed(evt);
-            }
-        });
-
-        passwordJField.setBackground(new java.awt.Color(238, 238, 238));
-        passwordJField.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        passwordJField.setText("Enter password");
-        passwordJField.setToolTipText("Click to enter your Password.");
-        passwordJField.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 5, 1, 5));
-        passwordJField.addFocusListener(new java.awt.event.FocusAdapter() {
+        userJField.setBackground(new java.awt.Color(238, 238, 238));
+        userJField.setForeground(new java.awt.Color(0, 0, 0));
+        userJField.setHorizontalAlignment(javax.swing.JTextField.LEFT);
+        userJField.setToolTipText("Click to enter your Email ID.");
+        userJField.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 5, 1, 5));
+        userJField.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
-                passwordJFieldFocusGained(evt);
+                userJFieldFocusGained(evt);
             }
             public void focusLost(java.awt.event.FocusEvent evt) {
-                passwordJFieldFocusLost(evt);
+                userJFieldFocusLost(evt);
             }
         });
-        passwordJField.addActionListener(new java.awt.event.ActionListener() {
+        userJField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                passwordJFieldActionPerformed(evt);
+                userJFieldActionPerformed(evt);
             }
         });
 
-        emailIDJField.setBackground(new java.awt.Color(238, 238, 238));
-        emailIDJField.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        emailIDJField.setText("Enter email id");
-        emailIDJField.setToolTipText("Click to enter your Email ID.");
-        emailIDJField.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 5, 1, 5));
-        emailIDJField.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusGained(java.awt.event.FocusEvent evt) {
-                emailIDJFieldFocusGained(evt);
-            }
-            public void focusLost(java.awt.event.FocusEvent evt) {
-                emailIDJFieldFocusLost(evt);
-            }
-        });
-        emailIDJField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                emailIDJFieldActionPerformed(evt);
-            }
-        });
-
-        jLabel1.setFont(new java.awt.Font("Lucida Grande", 1, 24)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Baskerville Old Face", 1, 48)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("LOGIN");
+        jLabel1.setText("Login!");
 
-        loginJButton1.setBackground(new java.awt.Color(200, 203, 178));
-        loginJButton1.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
-        loginJButton1.setForeground(new java.awt.Color(67, 100, 100));
-        loginJButton1.setText("Community Admin Login");
-        loginJButton1.addActionListener(new java.awt.event.ActionListener() {
+        jLabel3.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel3.setText("Role:");
+
+        comboRole.setForeground(new java.awt.Color(255, 255, 255));
+        comboRole.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "System Admin", "Hospital Admin", "Community Admin", "Patient", "Doctor" }));
+
+        btnLogin.setBackground(new java.awt.Color(0, 0, 0));
+        btnLogin.setFont(new java.awt.Font("Dialog", 1, 13)); // NOI18N
+        btnLogin.setForeground(new java.awt.Color(255, 255, 255));
+        btnLogin.setText("Login");
+        btnLogin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                loginJButton1ActionPerformed(evt);
+                btnLoginActionPerformed(evt);
             }
         });
 
-        loginJButton2.setBackground(new java.awt.Color(200, 203, 178));
-        loginJButton2.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
-        loginJButton2.setForeground(new java.awt.Color(67, 100, 100));
-        loginJButton2.setText("Doctor Login");
-        loginJButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                loginJButton2ActionPerformed(evt);
-            }
-        });
+        jLabel4.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel4.setText("Username:");
+
+        jLabel5.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel5.setText("Password:");
+
+        passwordJField.setBackground(new java.awt.Color(255, 255, 255));
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ui/images/recep.jpg"))); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(309, 309, 309)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
-                    .addComponent(emailIDJField, javax.swing.GroupLayout.PREFERRED_SIZE, 208, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(passwordJField, javax.swing.GroupLayout.PREFERRED_SIZE, 208, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(300, 300, 300))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(43, 43, 43)
-                .addComponent(loginJButton)
-                .addGap(33, 33, 33)
-                .addComponent(loginJButton1)
-                .addGap(34, 34, 34)
-                .addComponent(loginJButton2)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(109, 109, 109)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel3)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(comboRole, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel4)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(userJField, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(113, 113, 113)
+                        .addComponent(jLabel5)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(passwordJField, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(35, 35, 35)
+                                .addComponent(btnLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 274, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel2)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(20, 20, 20)
-                .addComponent(jLabel1)
-                .addGap(174, 174, 174)
-                .addComponent(emailIDJField, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(passwordJField, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(loginJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(loginJButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(loginJButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(232, 232, 232))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(57, 57, 57)
+                        .addComponent(jLabel1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(comboRole, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel3))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel4)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(1, 1, 1)
+                                .addComponent(userJField, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(19, 19, 19)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(passwordJField, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel5))
+                        .addGap(18, 18, 18)
+                        .addComponent(btnLogin))
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel2)))
+                .addContainerGap(81, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void loginJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginJButtonActionPerformed
-                    AdminDashboard adminDashboard = new AdminDashboard();
-                    AdminLeftSection adminOptions = new AdminLeftSection(jSplitPane, leftJPanel, rightJPanel);
-                    jSplitPane.setRightComponent(adminDashboard);
-                    jSplitPane.setLeftComponent(adminOptions);
-    }//GEN-LAST:event_loginJButtonActionPerformed
+    private void userJFieldFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_userJFieldFocusGained
+        if (userJField.getText().equals("Enter email id")) {
+            userJField.setText("");
+        }
+    }//GEN-LAST:event_userJFieldFocusGained
 
-    private void passwordJFieldFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_passwordJFieldFocusGained
-        if (passwordJField.getText().equals("Enter password")) {
+    private void userJFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_userJFieldFocusLost
+        // TODO add your handling code here:
+    }//GEN-LAST:event_userJFieldFocusLost
+
+    private void userJFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_userJFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_userJFieldActionPerformed
+
+    private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
+        // TODO add your handling code here:
+
+        String userName = userJField.getText();
+        String userPassword = passwordJField.getText();
+        Object userRole = comboRole.getSelectedItem();
+        
+        {
+        if(userName.contains("Admin") && userPassword.contains("Admin123") && userRole.equals("System Admin")){
+            JOptionPane.showMessageDialog(this,"Welcome System Admin");
+            AdminDashboard adminDashboard = new AdminDashboard();
+            AdminLeftSection adminOptions = new AdminLeftSection(jSplitPane, leftJPanel, rightJPanel);
+            jSplitPane.setRightComponent(adminDashboard);
+            jSplitPane.setLeftComponent(adminOptions);  
+            logoutJButton.setVisible(true);
+            userJField.setText("");
             passwordJField.setText("");
         }
-    }//GEN-LAST:event_passwordJFieldFocusGained
-
-    private void passwordJFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_passwordJFieldFocusLost
-
-    }//GEN-LAST:event_passwordJFieldFocusLost
-
-    private void passwordJFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_passwordJFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_passwordJFieldActionPerformed
-
-    private void emailIDJFieldFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_emailIDJFieldFocusGained
-        if (emailIDJField.getText().equals("Enter email id")) {
-            emailIDJField.setText("");
+        if(userName.contains("Com Admin") && userPassword.contains("CAdmin123") && userRole.equals("Community Admin")){
+            JOptionPane.showMessageDialog(this,"Welcome Community Admin");
+            AdminDashboard adminDashboard = new AdminDashboard();
+            CAdminLeftSection adminOptions = new CAdminLeftSection(jSplitPane, leftJPanel, rightJPanel);
+            jSplitPane.setRightComponent(adminDashboard);
+            jSplitPane.setLeftComponent(adminOptions);
+            logoutJButton.setVisible(true);
+            userJField.setText("");
+            passwordJField.setText("");
         }
-    }//GEN-LAST:event_emailIDJFieldFocusGained
-
-    private void emailIDJFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_emailIDJFieldFocusLost
-        // TODO add your handling code here:
-    }//GEN-LAST:event_emailIDJFieldFocusLost
-
-    private void emailIDJFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_emailIDJFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_emailIDJFieldActionPerformed
-
-    private void loginJButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginJButton1ActionPerformed
-                    AdminDashboard adminDashboard = new AdminDashboard();
-                    CAdminLeftSection adminOptions = new CAdminLeftSection(jSplitPane, leftJPanel, rightJPanel);
-                    jSplitPane.setRightComponent(adminDashboard);
-                    jSplitPane.setLeftComponent(adminOptions);       
-    }//GEN-LAST:event_loginJButton1ActionPerformed
-
-    private void loginJButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginJButton2ActionPerformed
-                    AdminDashboard adminDashboard = new AdminDashboard();
-                    DoctorLeftSection adminOptions = new DoctorLeftSection(jSplitPane, leftJPanel, rightJPanel);
-                    jSplitPane.setRightComponent(adminDashboard);
-                    jSplitPane.setLeftComponent(adminOptions);    // TODO add your handling code here:
-    }//GEN-LAST:event_loginJButton2ActionPerformed
-
+        if(userName.contains("Atharva") && userPassword.contains("Atharva123") && userRole.equals("Patient")){
+            JOptionPane.showMessageDialog(this,"Welcome");
+            AdminDashboard adminDashboard = new AdminDashboard();
+            PatientLeftSection adminOptions = new PatientLeftSection(jSplitPane, leftJPanel, rightJPanel);
+            jSplitPane.setRightComponent(adminDashboard);
+            jSplitPane.setLeftComponent(adminOptions);      
+            logoutJButton.setVisible(true);
+            userJField.setText("");
+            passwordJField.setText("");
+        }
+         if(userName.contains("Doc John") && userPassword.contains("Doc123") && userRole.equals("Doctor")){
+            JOptionPane.showMessageDialog(this,"Welcome Doctor");
+            AdminDashboard adminDashboard = new AdminDashboard();
+            DoctorLeftSection adminOptions = new DoctorLeftSection(jSplitPane, leftJPanel, rightJPanel);
+            jSplitPane.setRightComponent(adminDashboard);
+            jSplitPane.setLeftComponent(adminOptions);   
+            logoutJButton.setVisible(true);
+            userJField.setText("");
+            passwordJField.setText("");
+        }
+        if(userName.contains("HAdmin") && userPassword.contains("HAdmin123") && userRole.equals("Hospital Admin")){
+            JOptionPane.showMessageDialog(this,"Welcome Hospital Admin");
+            AdminDashboard adminDashboard = new AdminDashboard();
+            HospitalAdminLeftSection adminOptions = new HospitalAdminLeftSection(jSplitPane, leftJPanel, rightJPanel);
+            jSplitPane.setRightComponent(adminDashboard);
+            jSplitPane.setLeftComponent(adminOptions);   
+            logoutJButton.setVisible(true);
+            userJField.setText("");
+            passwordJField.setText("");
+        }
+    }//GEN-LAST:event_btnLoginActionPerformed
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField emailIDJField;
+    private javax.swing.JButton btnLogin;
+    private javax.swing.JComboBox<String> comboRole;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JButton loginJButton;
-    private javax.swing.JButton loginJButton1;
-    private javax.swing.JButton loginJButton2;
-    private javax.swing.JTextField passwordJField;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JPasswordField passwordJField;
+    private javax.swing.JTextField userJField;
     // End of variables declaration//GEN-END:variables
 }

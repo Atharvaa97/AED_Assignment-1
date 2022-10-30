@@ -6,7 +6,7 @@ package ui;
 
 import model.City;
 import model.Person;
-import model.PersonDirectory;
+import model.Person_Directory;
 import java.awt.Dimension;
 import java.awt.Toolkit;
 import java.text.DateFormat;
@@ -36,11 +36,11 @@ public class AdminViewEditPersonDirectory extends javax.swing.JPanel {
         jSplitPane1.setDividerLocation((int) (0.2 * (new Dimension(Toolkit.getDefaultToolkit().getScreenSize()).width - 300)));
 
         DefaultListModel model = new DefaultListModel();
-        if (PersonDirectory.allPeople.isEmpty()) {
+        if (Person_Directory.allPeople.isEmpty()) {
             uploadedJList.setModel(model);
             JOptionPane.showMessageDialog(this, "No people found!!", "Directory Details", ERROR_MESSAGE);
         } else {
-            PersonDirectory.allPeople.forEach(person -> {
+            Person_Directory.allPeople.forEach(person -> {
                 model.addElement(person.personId + " - " + person.name);
             });
             uploadedJList.setModel(model);
@@ -639,6 +639,7 @@ public class AdminViewEditPersonDirectory extends javax.swing.JPanel {
 
         jPanel2.setBackground(new java.awt.Color(11, 48, 56));
 
+        uploadedJList.setBackground(new java.awt.Color(238, 238, 238));
         uploadedJList.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
                 uploadedJListFocusGained(evt);
@@ -921,7 +922,7 @@ public class AdminViewEditPersonDirectory extends javax.swing.JPanel {
             System.out.println(ex);
         }
 //        selectedProfile.type = isPatientJCheckBox.isSelected() ? 1 : 0;
-        PersonDirectory.allPeople.set(selectedIndex, selectedProfile);
+        Person_Directory.allPeople.set(selectedIndex, selectedProfile);
         JOptionPane.showMessageDialog(this, "Updated successfully!", "Update Profile", INFORMATION_MESSAGE);
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -930,9 +931,9 @@ public class AdminViewEditPersonDirectory extends javax.swing.JPanel {
             JOptionPane.showMessageDialog(this, "Please select a person's profile to delete!", "Delete Profile", ERROR_MESSAGE);
             return;
         }
-        PersonDirectory.allPeople.remove(selectedIndex);
+        Person_Directory.allPeople.remove(selectedIndex);
         JOptionPane.showMessageDialog(this, "Deleted successfully!!", "Delete profile", INFORMATION_MESSAGE);
-        if (PersonDirectory.allPeople.isEmpty()) {
+        if (Person_Directory.allPeople.isEmpty()) {
             resetValues();
         }
     }//GEN-LAST:event_jButton2ActionPerformed
@@ -957,7 +958,7 @@ public class AdminViewEditPersonDirectory extends javax.swing.JPanel {
     public void openSelectedProfile() {
         selectedIndex = uploadedJList.getSelectedIndex();//get the index of the selection made in the left section.
         if (selectedIndex != -1) {
-            selectedProfile = PersonDirectory.allPeople.get(selectedIndex);
+            selectedProfile = Person_Directory.allPeople.get(selectedIndex);
             nameJField.setText(String.valueOf(selectedProfile.name));
             zipJField.setText(String.valueOf(selectedProfile.address.zipcode));
             addressJField.setText(String.valueOf(selectedProfile.address.address));

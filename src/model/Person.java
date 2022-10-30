@@ -23,6 +23,8 @@ public class Person {
     public int type;
     public Date dob;
     public String mobileNo;
+    public int doctorIdentifier;
+    public Object personDetails;
 
     public Person() {
         city = new City();

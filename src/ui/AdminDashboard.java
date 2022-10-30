@@ -4,12 +4,9 @@
  */
 package ui;
 
-import java.awt.Dimension;
-import java.awt.Toolkit;
+
 import model.City;
 import model.Community;
-import model.PatientDirectory;
-import model.PersonDirectory;
 
 /**
  *

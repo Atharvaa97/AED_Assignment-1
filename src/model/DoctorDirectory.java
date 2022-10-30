@@ -11,5 +11,5 @@ import java.util.ArrayList;
  * @author Atharva
  */
 public class DoctorDirectory {
-    public static ArrayList<Person> allDoctor = new ArrayList<>();
+    public static ArrayList<Doctor> doctorDirectory = new ArrayList<>();
 }

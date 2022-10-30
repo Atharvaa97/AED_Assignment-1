@@ -11,6 +11,4 @@ import java.util.ArrayList;
  * @author Atharva
  */
 public class Hospital {
-    public static String[] hospitalValues = {"John Hopkins Medical Center", "Boston Medical", "Cedars-Sinai Hospital", "Mayo Clinic", "Advent Health"};
-    public static ArrayList<Community> allCities = new ArrayList<>();
 }

@@ -8,7 +8,7 @@ import model.Encounter;
 import model.Patient;
 import model.PatientDirectory;
 import model.Person;
-import model.PersonDirectory;
+import model.Person_Directory;
 import java.awt.Dimension;
 import java.awt.Toolkit;
 import java.text.ParseException;
@@ -34,8 +34,8 @@ public class PatientView extends javax.swing.JPanel {
     public PatientView() {
         initComponents();
 
-        for (int i = 0; i < PersonDirectory.allPeople.size(); i++) {
-            Person sel = PersonDirectory.allPeople.get(i);
+        for (int i = 0; i < Person_Directory.allPeople.size(); i++) {
+            Person sel = Person_Directory.allPeople.get(i);
             System.out.println("Person directory" + sel.personId + "-" + sel.name);
         }
 
@@ -45,7 +45,7 @@ public class PatientView extends javax.swing.JPanel {
         encounterJPanel.setVisible(false);
         if (PatientDirectory.patientDirectory.isEmpty()) {
             uploadedJList.setModel(model);
-            JOptionPane.showMessageDialog(this, "People Directory Empty!", "View Details", ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Patient Directory Empty!", "View Details", ERROR_MESSAGE);
         } else {
             PatientDirectory.patientDirectory.forEach(patient -> {
                 model.addElement(patient.patientIdentifier + " - " + patient.personDetails.name);
@@ -370,7 +370,7 @@ public class PatientView extends javax.swing.JPanel {
                 .addGroup(encounterJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel18)
                     .addComponent(bloodPressureJLabel))
-                .addContainerGap(31, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -458,7 +458,7 @@ public class PatientView extends javax.swing.JPanel {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel17)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 236, Short.MAX_VALUE)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 245, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -480,8 +480,8 @@ public class PatientView extends javax.swing.JPanel {
                 .addGap(21, 21, 21)
                 .addComponent(jLabel1)
                 .addGap(18, 18, 18)
-                .addComponent(jSplitPane1)
-                .addGap(22, 22, 22))
+                .addComponent(jSplitPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 531, Short.MAX_VALUE)
+                .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents
 

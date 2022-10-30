@@ -7,7 +7,7 @@ package ui;
 import model.City;
 import model.Community;
 import model.Person;
-import model.PersonDirectory;
+import model.Person_Directory;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -807,7 +807,7 @@ public class NewPersonAddition extends javax.swing.JPanel {
             System.out.println(ex);
         }
         Person.PERSON_ID++;
-        PersonDirectory.allPeople.add(newPersonAddition);
+        Person_Directory.allPeople.add(newPersonAddition);
         JOptionPane.showMessageDialog(this, "Person created successfully!!", "Create Person", INFORMATION_MESSAGE);
         AdminView adminViewDashboard = new AdminView();
         this.jSplitMainPane.setRightComponent(adminViewDashboard);

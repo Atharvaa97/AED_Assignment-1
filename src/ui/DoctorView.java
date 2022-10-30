@@ -6,9 +6,12 @@ package ui;
 
 import model.Doctor;
 import model.DoctorDirectory;
+import model.Person;
 import java.awt.Dimension;
 import java.awt.Toolkit;
 import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Locale;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.DefaultListModel;
@@ -19,33 +22,28 @@ import static javax.swing.JOptionPane.ERROR_MESSAGE;
  *
  * @author Atharva
  */
+
 public class DoctorView extends javax.swing.JPanel {
 
-    /**
-     * Creates new form AdminView
-     */
-    public DoctorView() {
-        initComponents();
+    Doctor selectedPerson;
+    
+public DoctorView() {
+        
+            initComponents();
+
+        for (int i = 0; i < DoctorDirectory.doctorDirectory.size(); i++) {
+            Person sel = DoctorDirectory.doctorDirectory.get(i);
+            System.out.println("Person directory" + sel.personId + "-" + sel.name);
+        }
+
         jSplitPane1.setDividerLocation((int) (0.35 * (new Dimension(Toolkit.getDefaultToolkit().getScreenSize()).width - 300)));
         DefaultListModel model = new DefaultListModel();
-        detailsJPanel.setVisible(false);
-        if (DoctorDirectory.allDoctor.isEmpty()) {
+        if (DoctorDirectory.doctorDirectory.isEmpty()) {
             uploadedJList.setModel(model);
             JOptionPane.showMessageDialog(this, "Doctor Directory Empty!", "View Details", ERROR_MESSAGE);
-        } else {
-            DoctorDirectory.allDoctor.forEach(car -> {
-                model.addElement(car.personId + " - " + car.name);
-            });
-            uploadedJList.setModel(model);
-            uploadedJList.setSelectedIndex(0);
-            try {
-                openSelectedProfile();
-            } catch (ParseException ex) {
-                Logger.getLogger(DoctorView.class.getName()).log(Level.SEVERE, null, ex);
-            }
-        }
-    }
-
+        }      
+}
+          
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -72,10 +70,16 @@ public class DoctorView extends javax.swing.JPanel {
         emailJLabel = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
         mobileNoJLabel = new javax.swing.JLabel();
+        jLabel_Hospital_Name = new javax.swing.JLabel();
+        jLabel_Specialization = new javax.swing.JLabel();
+        jLabel_Total_Experience = new javax.swing.JLabel();
+        respiratoryRateJLabel = new javax.swing.JLabel();
+        heartRateJLabel = new javax.swing.JLabel();
+        ageJLabel = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
+        jLabel16 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         uploadedJList = new javax.swing.JList<>();
-        jLabel16 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(11, 48, 56));
 
@@ -160,21 +164,58 @@ public class DoctorView extends javax.swing.JPanel {
         mobileNoJLabel.setForeground(new java.awt.Color(255, 255, 255));
         mobileNoJLabel.setText("Select Person to see details!");
 
+        jLabel_Hospital_Name.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
+        jLabel_Hospital_Name.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel_Hospital_Name.setText("Hospital Name");
+
+        jLabel_Specialization.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
+        jLabel_Specialization.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel_Specialization.setText("Specialization");
+
+        jLabel_Total_Experience.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
+        jLabel_Total_Experience.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel_Total_Experience.setText("Total Experience");
+
+        respiratoryRateJLabel.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
+        respiratoryRateJLabel.setForeground(new java.awt.Color(255, 255, 255));
+        respiratoryRateJLabel.setText("Select Person to see details!");
+
+        heartRateJLabel.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
+        heartRateJLabel.setForeground(new java.awt.Color(255, 255, 255));
+        heartRateJLabel.setText("Select Person to see details!");
+
+        ageJLabel.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
+        ageJLabel.setForeground(new java.awt.Color(255, 255, 255));
+        ageJLabel.setText("Select Person to see details!");
+
         javax.swing.GroupLayout detailsJPanelLayout = new javax.swing.GroupLayout(detailsJPanel);
         detailsJPanel.setLayout(detailsJPanelLayout);
         detailsJPanelLayout.setHorizontalGroup(
             detailsJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(detailsJPanelLayout.createSequentialGroup()
-                .addGap(125, 125, 125)
+                .addGap(90, 90, 90)
                 .addGroup(detailsJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel11)
-                    .addComponent(jLabel10)
-                    .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(detailsJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(emailJLabel)
-                    .addComponent(dobJLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 205, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(mobileNoJLabel))
+                    .addGroup(detailsJPanelLayout.createSequentialGroup()
+                        .addGroup(detailsJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel11)
+                            .addComponent(jLabel10)
+                            .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(detailsJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(emailJLabel)
+                            .addComponent(dobJLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 205, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(mobileNoJLabel)))
+                    .addGroup(detailsJPanelLayout.createSequentialGroup()
+                        .addGroup(detailsJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel_Hospital_Name, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel_Specialization, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel_Total_Experience, javax.swing.GroupLayout.Alignment.TRAILING))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(detailsJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(respiratoryRateJLabel)
+                            .addComponent(heartRateJLabel)
+                            .addComponent(ageJLabel))
+                        .addGap(6, 6, 6)))
                 .addContainerGap(21, Short.MAX_VALUE))
             .addGroup(detailsJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(detailsJPanelLayout.createSequentialGroup()
@@ -211,7 +252,19 @@ public class DoctorView extends javax.swing.JPanel {
                 .addGroup(detailsJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel11)
                     .addComponent(mobileNoJLabel))
-                .addContainerGap(225, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(detailsJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel_Hospital_Name)
+                    .addComponent(respiratoryRateJLabel))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(detailsJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel_Specialization)
+                    .addComponent(heartRateJLabel))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(detailsJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel_Total_Experience)
+                    .addComponent(ageJLabel))
+                .addContainerGap(132, Short.MAX_VALUE))
             .addGroup(detailsJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(detailsJPanelLayout.createSequentialGroup()
                     .addContainerGap()
@@ -262,6 +315,29 @@ public class DoctorView extends javax.swing.JPanel {
 
         jPanel2.setBackground(new java.awt.Color(11, 48, 56));
 
+        jLabel16.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
+        jLabel16.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel16.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel16.setText("Directory:");
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel16, javax.swing.GroupLayout.DEFAULT_SIZE, 120, Short.MAX_VALUE)
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel16)
+                .addContainerGap(512, Short.MAX_VALUE))
+        );
+
+        jSplitPane1.setLeftComponent(jPanel2);
+
+        uploadedJList.setBackground(new java.awt.Color(255, 255, 255));
+        uploadedJList.setForeground(new java.awt.Color(51, 51, 55));
         uploadedJList.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
                 uploadedJListFocusGained(evt);
@@ -274,35 +350,14 @@ public class DoctorView extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(uploadedJList);
 
-        jLabel16.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
-        jLabel16.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel16.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel16.setText("Directory:");
-
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-            .addComponent(jLabel16, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel16)
-                .addGap(18, 18, 18)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 457, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-
-        jSplitPane1.setLeftComponent(jPanel2);
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(24, 24, 24)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(475, Short.MAX_VALUE))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addContainerGap()
@@ -312,7 +367,10 @@ public class DoctorView extends javax.swing.JPanel {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 101, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 241, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(292, 292, 292))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(21, 21, 21)
@@ -323,6 +381,9 @@ public class DoctorView extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    
+    
+    
     private void uploadedJListFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_uploadedJListFocusGained
         try {
             openSelectedProfile();
@@ -340,27 +401,34 @@ public class DoctorView extends javax.swing.JPanel {
     }//GEN-LAST:event_uploadedJListMouseClicked
 
     private void openSelectedProfile() throws ParseException {
-//        int seletedDoctorIndex = uploadedJList.getSelectedIndex();
-//        if (seletedDoctorIndex != -1) {
-//            Doctor selectedDoctor = DoctorDirectory.allDoctor.get(seletedDoctorIndex);
-//            detailsJPanel.setVisible(true);
-//            identifierJLabel.setText(String.valueOf(selectedDoctor.doctorId));
-//            nameJLabel.setText(String.valueOf(selectedDoctor.name));
-//            addressJLabel.setText(String.valueOf(selectedDoctor.hospitalname));
-//            zipCodeJLabel.setText(String.valueOf(selectedDoctor.address.zipcode));
-//            cityJLabel.setText(String.valueOf(selectedDoctor.city.city));
-//            stateJLabel.setText(String.valueOf(selectedDoctor.city.state));
-//            emailJLabel.setText(String.valueOf(selectedDoctor.email));
-//            mobileNoJLabel.setText(String.valueOf(selectedDoctor.mobileNo));
-//        }
+               int seletedPersonIndex = uploadedJList.getSelectedIndex();
+        if (seletedPersonIndex != -1) {
+            selectedPerson = (Doctor) DoctorDirectory.doctorDirectory.get(seletedPersonIndex);
+            identifierJLabel.setText(String.valueOf(selectedPerson.personDetails.personId));
+            nameJLabel.setText(String.valueOf(selectedPerson.personDetails.name));
+            addressJLabel.setText(String.valueOf(selectedPerson.personDetails.address));
+            zipCodeJLabel.setText(String.valueOf(selectedPerson.personDetails.address.zipcode));
+            cityJLabel.setText(String.valueOf(selectedPerson.personDetails.city.city));
+            stateJLabel.setText(String.valueOf(selectedPerson.personDetails.city.state));
+            dobJLabel.setText((String.valueOf((new SimpleDateFormat("MM/dd/yyyy", Locale.US)).format(selectedPerson.personDetails.dob))));
+            emailJLabel.setText(String.valueOf(selectedPerson.personDetails.email));
+            mobileNoJLabel.setText(String.valueOf(selectedPerson.personDetails.mobileNo));
+
+            DefaultListModel model = new DefaultListModel();
+            selectedPerson.allAppointmentsHistory.AppointmentHistory.forEach(doctor -> {
+                model.addElement(doctor.visitDate);
+            });
+        }
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel addressJLabel;
+    private javax.swing.JLabel ageJLabel;
     private javax.swing.JLabel cityJLabel;
     private javax.swing.JPanel detailsJPanel;
     private javax.swing.JLabel dobJLabel;
     private javax.swing.JLabel emailJLabel;
+    private javax.swing.JLabel heartRateJLabel;
     private javax.swing.JLabel identifierJLabel;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
@@ -373,12 +441,16 @@ public class DoctorView extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JLabel jLabel_Hospital_Name;
+    private javax.swing.JLabel jLabel_Specialization;
+    private javax.swing.JLabel jLabel_Total_Experience;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSplitPane jSplitPane1;
     private javax.swing.JLabel mobileNoJLabel;
     private javax.swing.JLabel nameJLabel;
+    private javax.swing.JLabel respiratoryRateJLabel;
     private javax.swing.JLabel stateJLabel;
     private javax.swing.JList<String> uploadedJList;
     private javax.swing.JLabel zipCodeJLabel;

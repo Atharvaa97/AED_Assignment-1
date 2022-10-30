@@ -8,7 +8,7 @@ import model.Encounter;
 import model.Patient;
 import model.PatientDirectory;
 import model.Person;
-import model.PersonDirectory;
+import model.Person_Directory;
 import model.VitalSigns;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -571,8 +571,8 @@ public class AddPatientVisit extends javax.swing.JPanel {
         filteredJList.removeAll();
         detailsJPanel.setVisible(false);
         visitJPanel.setVisible(false);
-        for (int i = 0; i < PersonDirectory.allPeople.size(); i++) {
-            Person onGoing = PersonDirectory.allPeople.get(i);
+        for (int i = 0; i < Person_Directory.allPeople.size(); i++) {
+            Person onGoing = Person_Directory.allPeople.get(i);
             if (onGoing.name.contains(searchNameJField.getText())) {
                 filteredList.add(onGoing);
             }
@@ -716,7 +716,7 @@ public class AddPatientVisit extends javax.swing.JPanel {
     public void openSelectedProfile() {
         int seletedPersonIndex = filteredJList.getSelectedIndex();
         if (seletedPersonIndex != -1) {
-            selectedPerson = PersonDirectory.allPeople.get(seletedPersonIndex);
+            selectedPerson = Person_Directory.allPeople.get(seletedPersonIndex);
             selectedPatient = getPatient();
             detailsJPanel.setVisible(true);
             identifierJLabel.setText(String.valueOf(selectedPerson.personId));
