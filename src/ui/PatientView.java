@@ -28,9 +28,6 @@ public class PatientView extends javax.swing.JPanel {
 
     Patient selectedPerson;
 
-    /**
-     * Creates new form AdminView
-     */
     public PatientView() {
         initComponents();
 
@@ -480,7 +477,7 @@ public class PatientView extends javax.swing.JPanel {
                 .addGap(21, 21, 21)
                 .addComponent(jLabel1)
                 .addGap(18, 18, 18)
-                .addComponent(jSplitPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 531, Short.MAX_VALUE)
+                .addComponent(jSplitPane1)
                 .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents
@@ -493,10 +490,6 @@ public class PatientView extends javax.swing.JPanel {
         openSelectedEncounter();
     }//GEN-LAST:event_encounterJListMouseClicked
 
-    private void uploadedJListFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_uploadedJListFocusGained
-        // TODO add your handling code here:
-    }//GEN-LAST:event_uploadedJListFocusGained
-
     private void uploadedJListMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_uploadedJListMouseClicked
         try {
             openSelectedProfile();
@@ -504,6 +497,10 @@ public class PatientView extends javax.swing.JPanel {
             Logger.getLogger(PatientView.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_uploadedJListMouseClicked
+
+    private void uploadedJListFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_uploadedJListFocusGained
+        // TODO add your handling code here:
+    }//GEN-LAST:event_uploadedJListFocusGained
 
     private void openSelectedEncounter() {
         int seletedPersonIndex = encounterJList.getSelectedIndex();
@@ -542,7 +539,6 @@ public class PatientView extends javax.swing.JPanel {
 
             encounterJList.setVisible(true);
             openSelectedEncounter();
-//            isPatientJLabel.setText(String.valueOf(selectedPerson.type == 0 ? "No" : "Yes"));
         }
     }
 

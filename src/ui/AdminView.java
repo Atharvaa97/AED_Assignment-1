@@ -23,9 +23,7 @@ import static javax.swing.JOptionPane.ERROR_MESSAGE;
  */
 public class AdminView extends javax.swing.JPanel {
 
-    /**
-     * Creates new form AdminView
-     */
+
     public AdminView() {
         initComponents();
         jSplitPane1.setDividerLocation((int) (0.35 * (new Dimension(Toolkit.getDefaultToolkit().getScreenSize()).width - 300)));

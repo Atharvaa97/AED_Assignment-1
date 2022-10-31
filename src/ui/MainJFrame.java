@@ -211,9 +211,7 @@ public class MainJFrame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void logoutJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logoutJButtonActionPerformed
-        LoginPage loginPage = new LoginPage(jSplitPane, leftJPanel, rightJPanel, logoutJButton);
-        jSplitPane.setRightComponent(loginPage);
-        jSplitPane.setDividerLocation((int) (0 * (new Dimension(Toolkit.getDefaultToolkit().getScreenSize()).width)));
+
         
     }//GEN-LAST:event_logoutJButtonActionPerformed
 

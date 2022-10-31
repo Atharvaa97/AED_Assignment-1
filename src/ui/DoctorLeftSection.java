@@ -17,11 +17,7 @@ public class DoctorLeftSection extends javax.swing.JPanel {
     public JPanel jPanelMainLeft;
     public JPanel jPanelMainRight;
 
-    /**
-     * Creates new form AdminLeftSection
-     *
-     * @param jSplitPane
-     */
+ 
     public DoctorLeftSection(JSplitPane jSplitPane, JPanel leftPanel, JPanel rightPanel) {
         initComponents();
         this.jSplitMainPane = jSplitPane;

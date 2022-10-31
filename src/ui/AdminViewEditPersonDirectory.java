@@ -28,9 +28,6 @@ public class AdminViewEditPersonDirectory extends javax.swing.JPanel {
     Person selectedProfile;
     int selectedIndex;
 
-    /**
-     * Creates new form AdminViewEditPersonDirectory
-     */
     public AdminViewEditPersonDirectory() {
         initComponents();
         jSplitPane1.setDividerLocation((int) (0.2 * (new Dimension(Toolkit.getDefaultToolkit().getScreenSize()).width - 300)));
